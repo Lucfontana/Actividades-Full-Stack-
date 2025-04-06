@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    color: white;
+    list-style-type: none;
+}
+
+html {
+    background-image: url(bgIA.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(108, 144, 221, 0.342);
+}
+
+header h1{
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid;
+    transition: all ease .5s;
+    font-size: 30px;
+
+}
+
+header h1:hover{
+    transition: all ease .5s;
+    font-size: 33px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 16px;
+    transition: all ease .5s;
+}
+
+nav ul:hover{
+    transition: all ease .5s;
+    font-size: 17px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    /* Hace que las columnas se repitan una cantidad automática para que se adapten 
+    a ellas mismas, y como tamaño tendran mínimo 300px y máximo 2 porciones de la pantalla. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); 
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    text-align: justify;
+}
+
+
+footer {
+    margin: 20px 0 0 0;
+    /* position: relative;
+    top: 90vh; */
+}
+
+footer p{
+    padding: 10px 0 10px 0;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
