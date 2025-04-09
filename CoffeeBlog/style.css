@@ -48,8 +48,15 @@ nav a {
     color: rgb(174, 52, 52);
 }
 
+.ultimas-publicaciones{
+    text-align: center;
+}
+
 .post {
     margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .posteo {
@@ -58,6 +65,10 @@ nav a {
     border-radius: 8px;
     margin: 0 0 1rem;
     box-shadow: 5px 5px 10px #5f5656;
+    min-width: 400px;
+    max-width: 30vw;
+    margin: 15px;
+    text-align: center;
 }
 
 .posteo img {
