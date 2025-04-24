@@ -1,0 +1,55 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    
+    'header header lateral'
+    'seccion1 seccion1 lateral'
+    'seccion1 seccion1 lateral'
+    'seccion2 seccion2 lateral'
+    'seccion2 seccion2 lateral'
+    'pie pie pie'
+    ;
+
+    text-align: center;
+}
+
+.hijo1{
+    grid-area: header;
+    padding: 1rem;
+    background-color: aqua;
+}
+
+.hijo2{
+   
+    grid-area: seccion1;
+    background-color: palevioletred;
+}
+
+.hijo3{
+    
+    grid-area: seccion2;
+    background-color: blueviolet;
+}
+
+.hijo4{
+    grid-area: lateral;
+    background-color: brown;
+}
+
+.hijo5{
+
+    grid-area: pie;
+    background-color:coral ;
+}
+
+.hijo1, .hijo2,  .hijo3 , .hijo4, .hijo5{
+
+    padding: 1rem;
+}
