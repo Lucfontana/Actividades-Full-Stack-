@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbarritas {
+    display: flex;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+span{
+    border-bottom: 2px solid black;
+    width: 2px;
+    margin: 0 0 2px 0;
+}
+
+nav {
+    background-color: blueviolet;
+    font-size: 15px;
+    display: flex;
+    padding: 20px 5px 20px 5px;
+}
+
+nav p {
+    color: white;
+    font-family: 17px;
+}
+
+.links {
+    margin: 0 0 0 15px;
+    padding-left: 15px;
+    border-left: solid;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 15rem);
+
+    grid-template-areas: 
+    'noticia1 noticia1 noticia2 noticia3'
+    'noticia1 noticia1 noticia4 noticia4'
+    'noticia5 noticia6 noticia7 noticia7';
+    gap: 15px;
+    margin: 2px;
+}
+
+.gridContainer div {
+    border: solid;
+}
+
+.noticia1 {
+    grid-area: noticia1;
+}
+.noticia2 {
+    grid-area: noticia2;
+}
+.noticia3 {
+    grid-area: noticia3;
+}
+.noticia4 {
+    grid-area: noticia4;
+}
+.noticia5 {
+    grid-area: noticia5;
+}
+.noticia6 {
+    grid-area: noticia6;
+}
+.noticia7 {
+    grid-area: noticia7;
+}
+
+
+
