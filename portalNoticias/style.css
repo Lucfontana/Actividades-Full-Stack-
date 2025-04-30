@@ -62,14 +62,14 @@ nav p {
 .gridContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 15rem);
+    grid-template-rows: repeat(3, 19rem);
 
     grid-template-areas: 
     'noticia1 noticia1 noticia2 noticia3'
     'noticia1 noticia1 noticia4 noticia4'
     'noticia5 noticia6 noticia7 noticia7';
     gap: 15px;
-    margin: 2rem 2px 2px 2px;
+    margin: 15px;
 }
 
 .gridContainer div {
@@ -79,20 +79,26 @@ nav p {
     background-position: center center;
 }
 
-.noticia1, .noticia3, .noticia4, .noticia5, .noticia6, .noticia7{
-    display: grid;
-}
-
+/* Estos contenedores, opté por ponerles grid para alinear el
+texto a la parte inferior del contenedor con align-items. Los
+otros contenedores no tienen grid porque afectan a los parrafos,
+haciendo que queden fuera del recuadro grid */
 .noticia1, .noticia3, .noticia4, .noticia7{
     color: white;
     align-items: end;
     padding: 20px;
+    display: grid;
 }
 
 .textOscurito{
     background-color: rgba(0, 0, 0, 0.511);
     padding: 5px;
 
+}
+
+.categoria {
+    padding: 20px 0;
+    font-size: clamp(7px, 1.5vw, 14px);
 }
 
 .noticia1 {
@@ -146,6 +152,28 @@ nav p {
     grid-area: noticia7;
     background-image: url(img/pombo.jfif);
 }
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    justify-content: center;
+}
+
+.flexNoticia {
+    min-height: 20rem;
+    flex: 1;
+    border: solid 1px;
+    min-width: 200px;
+    max-width: 30%;
+    margin: 0 15px 15px 0;
+}
+
+.flexNoticia:last-child{
+    margin: 0 0 15px 0;
+}
+
+
 
 
 
