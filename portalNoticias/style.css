@@ -84,6 +84,13 @@ b {
     margin: 20px 0 0 15px;
     padding-left: 15px;
     border-left: solid;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.links:hover {
+    font-size: 17px;
+    cursor: pointer;
 }
 
 .links:first-child{
@@ -114,7 +121,7 @@ b {
 }
 
 .gridContainer div:hover{
-  transform: scale(1.05);
+  transform: scale(1.048);
 }
 
 /* Estos contenedores, opté por ponerles grid para alinear el
@@ -162,7 +169,7 @@ haciendo que queden fuera del recuadro grid */
     quise usar minmax() pero eso solo sirve para el tamaño de las 
     columnas/rows de grid */
     /* clamp(valorMinimo, valorPreferible, valorMáximo) */
-    font-size: clamp(10px, 2vw, 20px);
+    font-size: clamp(10px, 2vw, 17px);
     /* padding-bottom: 1rem; */
 }
 
@@ -205,8 +212,18 @@ haciendo que queden fuera del recuadro grid */
     min-width: 200px;
     max-width: 30%;
     margin: 0 15px 15px 0;
+    transition: transform 0.5s ease;
 }
+
+.flexNoticia:hover{
+    transform: scale(1.048);
+  }
 
 .flexNoticia:last-child{
     margin: 0 0 15px 0;
+}
+
+.flexNoticia p{
+    padding: 20px 0;
+    font-size: 12px;
 }
