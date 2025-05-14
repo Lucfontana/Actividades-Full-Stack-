@@ -158,6 +158,7 @@ haciendo que queden fuera del recuadro grid */
 
 .noticia2 {
     grid-area: noticia2;
+    display: block;
 }
 .noticia3 {
     grid-area: noticia3;
@@ -226,4 +227,48 @@ haciendo que queden fuera del recuadro grid */
 .flexNoticia p{
     padding: 20px 0;
     font-size: 12px;
+}
+
+@media (width < 700px) {
+    .gridContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gridContainer > div {
+        height: 300px;
+        width: 80vw;
+        margin: 0 0 30px;
+
+    }
+
+    .noticia2 {
+        display: none;
+    }
+
+    .mitadEspacio {
+        width: 100%;
+        height: 75%;
+        padding: 0;
+    }
+
+    .notiMenor {
+        font-size: clamp(13px, 2vw, 17px);
+    }
+    
+    .flexContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flexContainer .flexNoticia{
+        height: 300px;
+        min-width: 80vw;
+        margin: 0 0 15px 0;
+    }
+
+    .title {
+        font-size: 22px;
+    }
 }
