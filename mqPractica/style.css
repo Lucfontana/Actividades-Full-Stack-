@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    ---hdrFtrClr: rgb(0, 162, 255);
+    ---fuenteImportada: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ---clrDivs: rgb(141, 193, 241);
+    ---brdrRadio: 15px;
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
 }
 
 header{
@@ -9,17 +24,21 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: aqua;
+    background-color: var(---hdrFtrClr);
 }
 
-
+.title {
+    font-family: var(---fuenteImportada);
+    font-size: 30px;
+    font-weight: bold;
+}
 
 nav ul{
     list-style-type: none;
     display: flex;
 }
 
-ul li {
+ul li a{
     margin: 5px;
     text-decoration: none;
 }
@@ -37,34 +56,56 @@ ul li {
 
 .bienvenido{
     grid-area: aside;
-    background-color: blanchedalmond;
+    background-color: var(---clrDivs);
+    border-radius: var(---brdrRadio);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex {
     display: flex;
     flex-direction: column;
     grid-area: flex;
-    background-color: aqua;
+
 }
 
 .uno{
-    background-color: yellowgreen;
+    background-color: var(---clrDivs);
     margin: 0 0 15px 0;
     height: 49%;
+    padding: 10px;
+    border-radius: var(---brdrRadio);
 }
 
 .dos{
-    background-color: yellow;
+    background-color: var(---clrDivs);
     height: 49%;
+    padding: 10px;
+    border-radius: var(---brdrRadio);
+}
+
+footer {
+    display: flex;
+    background-color: var(---hdrFtrClr);
+    padding: 15px;
+    justify-content: center;
 }
 
 @media (width > 480px) and (width < 768px) {
+ header {
+    flex-direction: column;
+ }
+
  .grid {
     display: flex;
     flex-direction: column;
  }
 
-
+.uno {
+    margin: 0 15px 0 0;
+}
 
  .flex {
     height: auto;
@@ -74,6 +115,12 @@ ul li {
 }
 
 @media (width < 480px){
+    header {
+        flex-direction: column;
+     }
+     nav ul {
+        flex-direction: column;
+     }
     .grid {
         display: flex;
         flex-direction: column;

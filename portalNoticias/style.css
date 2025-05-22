@@ -229,6 +229,10 @@ haciendo que queden fuera del recuadro grid */
     font-size: 12px;
 }
 
+
+/* estilo el cuál es aplicado si el ancho de la página es menor a 400 pixeles,
+el mismo hace que todas las noticias del portal de noticias se pongan como columna,
+y edita la navbar minimamente para evitar el double scroll.  */
 @media (width < 700px) {
     .gridContainer {
         display: flex;
