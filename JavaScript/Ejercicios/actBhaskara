@@ -1,0 +1,25 @@
+alert("Calculadora de Bhaskara");
+let a = Number(prompt("Ingrese el valor de A"));
+let b = Number(prompt("Ingrese el valor de B"));
+let c = Number(prompt("Ingrese el valor de C"));
+
+let operacion, raizCuadrada, raiz1, raiz2;
+
+operacion = Math.pow(b, 2) -4 * a * c;
+raizCuadrada = Math.sqrt(operacion);
+
+raiz1 = (-b + raizCuadrada) / (2 * a);
+raiz2 = (-b - raizCuadrada) / (2 * a);
+
+
+if (operacion < 0) {
+    console.log("Error: Raíces imaginarias");
+} else if (a <= 0) {
+    console.log("Error: A no puede ser 0");
+} else {
+    console.log("Su primer raíz es: ", raiz1);
+    console.log("Su segunda raíz es: ", raiz2); 
+}
+
+
+
